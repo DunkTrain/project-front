@@ -25,6 +25,8 @@
         <th>Level</th>
         <th>Birthday</th>
         <th>Banned</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
 </table>
 
@@ -58,7 +60,13 @@
                     + item.profession + "</td><td>"
                     + item.level + "</td><td>"
                     + new Date(item.birthday).toLocaleDateString() + "</td><td>"
-                    + item.banned + "</td>"
+                    + item.banned + "</td><td>"
+                    + "<button id='button_edit_" + item.id + "'>"
+                    + "<img src='/img/edit.png'>"
+                    + "</button>" + "</td><td>"
+                    + "<button id='button_delete_" + item.id + "'>"
+                    + "<img src='/img/delete.png'>"
+                    + "</button>" + "</td>"
                 ).appendTo("#users");
             });
         });
